@@ -9,7 +9,9 @@
 #import "SKAppDelegate.h"
 #import "NSFileManager+DirectoryLocations.h"
 #include <zlib.h>
-
+#import "ASIHTTPRequest.h"
+#import "ASIDataDecompressor.h"
+#import "ZipArchive.h"
 NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 @implementation SKAppDelegate
 
@@ -38,18 +40,25 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 {  
     NSString *tmpPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[srcPath lastPathComponent]];
     [compressedData writeToFile:tmpPath atomically:YES];
-    NSTask *unZipTask = [[NSTask alloc] init];
-    [unZipTask setLaunchPath:@"/usr/bin/unzip"];
-    NSArray *arguments = [NSArray arrayWithObjects:tmpPath, nil];
-    [unZipTask setArguments:arguments];
-    [unZipTask setCurrentDirectoryPath:[srcPath stringByDeletingLastPathComponent]];
-    [unZipTask launch];
-    return YES;
+    ZipArchive *anZiper = [[[ZipArchive alloc] init] autorelease];
+    if (![anZiper UnzipOpenFile:tmpPath]) {
+        NSLog(@"open zip file %@ failed!", tmpPath);
+        return NO;
+    }
+    BOOL ret = [anZiper UnzipFileTo:[srcPath stringByDeletingLastPathComponent] overWrite:YES];
+    
+    if (!ret) {
+        NSLog(@"unzip file %@ failed!", tmpPath);
+    }
+    
+    [anZiper UnzipCloseFile];
+    
+    return ret;
 }
 
 - (BOOL)getFileList
 {
-    NSString *fileListUrlStr = [bigfootUrl stringByAppendingPathComponent:@"filelist.xml"];
+    NSString *fileListUrlStr = [bigfootUrl stringByAppendingString:@"filelist.xml"];
     NSString *fileListLocalPath = [applicationSupportDirectory stringByAppendingPathComponent:@"filelist.xml"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:fileListLocalPath]) {
         NSString *fileListBackUpPath = [applicationSupportDirectory stringByAppendingPathComponent:@"filelist-bak.xml"];
@@ -63,7 +72,19 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 
 - (BOOL)downloadFileFrom:(NSURL *)srcUrl to:(NSURL *)dstUrl
 {
-    NSData *data = [NSData dataWithContentsOfURL:srcUrl];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:srcUrl];
+    [request startSynchronous];
+    NSError *error = [request error];
+    if (error) {
+        NSLog(@"%@", error);
+        return NO;
+    }
+    int statuscode = [request responseStatusCode];
+    if (statuscode != 200) {
+        NSLog(@"download \"%@\" with http code %d", srcUrl, statuscode);
+        return NO;
+    }
+    NSData *data = [request responseData];
     NSString *dstDirectory = [[dstUrl path] stringByDeletingLastPathComponent];
     if (![[NSFileManager defaultManager] fileExistsAtPath:dstDirectory]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:dstDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -78,16 +99,35 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
         NSLog(@"nil");
         return NO;
     }
+    NSError *error = nil;
     NSString *srcPath = [srcUrl absoluteString];
-    srcPath = [srcPath stringByAppendingFormat:@"%@.z", srcPath];
+    srcPath = [srcPath stringByAppendingString:@".z"];
     NSURL *nowSrcUrl = [NSURL URLWithString:srcPath];
-    NSData *zdata = [NSData dataWithContentsOfURL:nowSrcUrl];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:nowSrcUrl];
+    [request startSynchronous];
+    error = [request error];
+    if (error) {
+        NSLog(@"%@", error);
+        return NO;
+    }
+    int statusCode = [request responseStatusCode];
+    if (statusCode != 200) {
+        NSLog(@"download \"%@\" with http code %d", nowSrcUrl, statusCode);
+        return NO;
+    }
+    
+    if (![[request originalURL] isEqualTo:[request url]]) {
+        NSLog(@"download wrong url %@", [request url]);
+        return NO;
+    }
+    
+    NSData *zdata = [request responseData];
     NSString *dstDirectory = [[dstUrl path] stringByDeletingLastPathComponent];
     if (![[NSFileManager defaultManager] fileExistsAtPath:dstDirectory]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:dstDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     
-     BOOL ret = [zdata writeToFile:[dstUrl path] atomically:YES];//[self uncompressZippedData:zdata toUrl:[dstUrl path]];
+    BOOL ret = [self uncompressZippedData:zdata toUrl:[dstUrl path]];
     if (!ret) {
         NSLog(@"%@", nowSrcUrl);
     }
@@ -189,11 +229,11 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 
 - (NSString *)bigFootPath:(NSString *)fileName
 {
-    return [bigfootUrl stringByAppendingFormat:@"/Interfaces/AddOns/%@", fileName];
+    return [bigfootUrl stringByAppendingFormat:@"/Interface/AddOns/%@", fileName];
 }
 - (NSString *)fileInLocalPath:(NSString *)fileName
 {
-    return [wowPath stringByAppendingFormat:@"/Interfaces/AddOns/%@", fileName];
+    return [wowPath stringByAppendingFormat:@"/Interface/AddOns/%@", fileName];
 }
 - (NSMutableArray *)mergerUpdateFiles
 {
@@ -212,7 +252,7 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
                 if (!oldCheckSum || ![newCheckSum isEqualToString:oldCheckSum]) {
                     [retArray addObject:oneNewFile];
                 } else {
-                    NSString *filePath = [wowPath stringByAppendingFormat:@"/Interfaces/AddOns/%@", oneNewFile];
+                    NSString *filePath = [wowPath stringByAppendingFormat:@"/Interface/AddOns/%@", oneNewFile];
                     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
                         [retArray addObject:oneNewFile];
                     }
