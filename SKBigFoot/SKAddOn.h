@@ -13,5 +13,6 @@
 @end
 @interface SKAddOn : NSObject
 @property (copy) NSString *addonName;
+@property (copy) NSString *title;
 @property (retain) NSMutableArray *files;
 @end

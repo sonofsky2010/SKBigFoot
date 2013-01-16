@@ -47,6 +47,7 @@
 		38CC018E161552B4002726C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CC018D161552B4002726C2 /* libz.dylib */; };
 		38CC018F16156C74002726C2 /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC018C16154F8E002726C2 /* NSFileManager+DirectoryLocations.m */; };
 		38CC019216158802002726C2 /* SKAddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC019116158801002726C2 /* SKAddOn.m */; };
+		B9200B31162A6C1000983E0D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = B9200B30162A6C1000983E0D /* NSData+MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +132,8 @@
 		38CC018D161552B4002726C2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38CC019016158801002726C2 /* SKAddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAddOn.h; sourceTree = "<group>"; };
 		38CC019116158801002726C2 /* SKAddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAddOn.m; sourceTree = "<group>"; };
+		B9200B2F162A6C1000983E0D /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		B9200B30162A6C1000983E0D /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +313,8 @@
 				38CC017516154DAB002726C2 /* Supporting Files */,
 				38CC019016158801002726C2 /* SKAddOn.h */,
 				38CC019116158801002726C2 /* SKAddOn.m */,
+				B9200B2F162A6C1000983E0D /* NSData+MD5.h */,
+				B9200B30162A6C1000983E0D /* NSData+MD5.m */,
 			);
 			path = SKBigFoot;
 			sourceTree = "<group>";
@@ -329,9 +334,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38CC016916154DAB002726C2 /* SKBigFoot1 */ = {
+		38CC016916154DAB002726C2 /* SKBigFoot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38CC018816154DAB002726C2 /* Build configuration list for PBXNativeTarget "SKBigFoot1" */;
+			buildConfigurationList = 38CC018816154DAB002726C2 /* Build configuration list for PBXNativeTarget "SKBigFoot" */;
 			buildPhases = (
 				38CC016616154DAB002726C2 /* Sources */,
 				38CC016716154DAB002726C2 /* Frameworks */,
@@ -341,7 +346,7 @@
 			);
 			dependencies = (
 			);
-			name = SKBigFoot1;
+			name = SKBigFoot;
 			productName = SKBigFoot;
 			productReference = 38CC016A16154DAB002726C2 /* SKBigFoot.app */;
 			productType = "com.apple.product-type.application";
@@ -367,7 +372,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38CC016916154DAB002726C2 /* SKBigFoot1 */,
+				38CC016916154DAB002726C2 /* SKBigFoot */,
 			);
 		};
 /* End PBXProject section */
@@ -420,6 +425,7 @@
 				387F6E9C16228C26005893DB /* unzip.c in Sources */,
 				387F6E9D16228C26005893DB /* zip.c in Sources */,
 				387F6E9E16228C26005893DB /* ZipArchive.mm in Sources */,
+				B9200B31162A6C1000983E0D /* NSData+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38CC018816154DAB002726C2 /* Build configuration list for PBXNativeTarget "SKBigFoot1" */ = {
+		38CC018816154DAB002726C2 /* Build configuration list for PBXNativeTarget "SKBigFoot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38CC018916154DAB002726C2 /* Debug */,

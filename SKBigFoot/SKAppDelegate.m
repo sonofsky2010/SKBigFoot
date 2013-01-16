@@ -12,6 +12,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIDataDecompressor.h"
 #import "ZipArchive.h"
+#import "NSData+MD5.h"
 NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 @implementation SKAppDelegate
 
@@ -203,10 +204,11 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
             return;
         }
         
+        self.updateInfo = @"检查哪些插件需要更新";
         self.updateFiles = [self mergerUpdateFiles];
         [self.updateProgress setMaxValue:[updateFiles count]];
         [self.updateProgress setDoubleValue:0.0f];
-    
+        NSLog(@"%@", updateFiles);
         [self downloadFileList:updateFiles];
         [sender setEnabled:YES];
     });
@@ -238,28 +240,24 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
 - (NSMutableArray *)mergerUpdateFiles
 {
     NSDictionary *newFildDict = [self newFileDict];
-    NSDictionary *oldFileDict = [self oldFileDict];
     NSMutableArray *retArray = [NSMutableArray array];
     for (NSString *key in [newFildDict allKeys]) {
         NSMutableDictionary *newAddon = [newFildDict objectForKey:key];
-        NSMutableDictionary *oldAddon = [oldFileDict objectForKey:key];
-        if (!oldAddon) {
-            [retArray addObjectsFromArray:[newAddon allKeys]];
-        } else {
-            for (NSString *oneNewFile in newAddon) {
-                NSString *newCheckSum = [newAddon objectForKey:oneNewFile];
-                NSString *oldCheckSum = [oldAddon objectForKey:oneNewFile];
-                if (!oldCheckSum || ![newCheckSum isEqualToString:oldCheckSum]) {
-                    [retArray addObject:oneNewFile];
-                } else {
-                    NSString *filePath = [wowPath stringByAppendingFormat:@"/Interface/AddOns/%@", oneNewFile];
-                    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-                        [retArray addObject:oneNewFile];
-                    }
+        for (NSString *fileKey in [newAddon allKeys]) {
+            NSString *filePath = [wowPath stringByAppendingFormat:@"/Interface/AddOns/%@", fileKey];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+                [retArray addObject:fileKey];
+                
+            } else {
+                NSString *md5String = [NSData MD5StringOfFilePath:filePath];
+                NSString *checkSum = [newAddon objectForKey:fileKey];
+                if (![md5String isEqualToString:checkSum]) {
+                    [retArray addObject:fileKey];
                 }
             }
         }
     }
+    
     return retArray;
 }
 
@@ -289,6 +287,7 @@ NSString *bigfootUrl = @"http://bfupdatedx.178.com/BigFoot/Interface/3.1/";
     NSArray *addons = [rootElement children];
     for (NSXMLElement *element in addons) {
         NSString *addOnName = [[element attributeForName:@"name"] stringValue];
+        NSString *title = [[element attributeForName:@"Title-zhCN"] stringValue];
         NSMutableDictionary *fileDict = [NSMutableDictionary dictionary];
         for (NSXMLElement *oneFileElement in [element children]) {
             NSString *filePath = [[oneFileElement attributeForName:@"path"] stringValue];

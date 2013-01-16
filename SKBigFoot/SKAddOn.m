@@ -13,6 +13,7 @@
 @end
 
 @implementation SKAddOn
+@synthesize title;
 @synthesize addonName;
 @synthesize files;
 @end
