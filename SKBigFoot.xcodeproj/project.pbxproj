@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		387F6E5C16227005005893DB /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3E16227005005893DB /* ASIWebPageRequest.m */; };
-		387F6E5D16227005005893DB /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4116227005005893DB /* ASICloudFilesCDNRequest.m */; };
-		387F6E5E16227005005893DB /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4316227005005893DB /* ASICloudFilesContainer.m */; };
-		387F6E5F16227005005893DB /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4516227005005893DB /* ASICloudFilesContainerRequest.m */; };
-		387F6E6016227005005893DB /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4716227005005893DB /* ASICloudFilesContainerXMLParserDelegate.m */; };
-		387F6E6116227005005893DB /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4916227005005893DB /* ASICloudFilesObject.m */; };
-		387F6E6216227005005893DB /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4B16227005005893DB /* ASICloudFilesObjectRequest.m */; };
-		387F6E6316227005005893DB /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4D16227005005893DB /* ASICloudFilesRequest.m */; };
-		387F6E6416227005005893DB /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5116227005005893DB /* ASIS3Bucket.m */; };
-		387F6E6516227005005893DB /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5316227005005893DB /* ASIS3BucketObject.m */; };
-		387F6E6616227005005893DB /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5516227005005893DB /* ASIS3BucketRequest.m */; };
-		387F6E6716227005005893DB /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5716227005005893DB /* ASIS3ObjectRequest.m */; };
-		387F6E6816227005005893DB /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5916227005005893DB /* ASIS3Request.m */; };
-		387F6E6916227005005893DB /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5B16227005005893DB /* ASIS3ServiceRequest.m */; };
+		387F6E5C16227005005893DB /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3E16227005005893DB /* ASIWebPageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E5D16227005005893DB /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4116227005005893DB /* ASICloudFilesCDNRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E5E16227005005893DB /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4316227005005893DB /* ASICloudFilesContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E5F16227005005893DB /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4516227005005893DB /* ASICloudFilesContainerRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6016227005005893DB /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4716227005005893DB /* ASICloudFilesContainerXMLParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6116227005005893DB /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4916227005005893DB /* ASICloudFilesObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6216227005005893DB /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4B16227005005893DB /* ASICloudFilesObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6316227005005893DB /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E4D16227005005893DB /* ASICloudFilesRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6416227005005893DB /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5116227005005893DB /* ASIS3Bucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6516227005005893DB /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5316227005005893DB /* ASIS3BucketObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6616227005005893DB /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5516227005005893DB /* ASIS3BucketRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6716227005005893DB /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5716227005005893DB /* ASIS3ObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6816227005005893DB /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5916227005005893DB /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E6916227005005893DB /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E5B16227005005893DB /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		387F6E6B16227088005893DB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 387F6E6A16227088005893DB /* libxml2.dylib */; };
 		387F6E6D1622709D005893DB /* libtidy.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 387F6E6C1622709D005893DB /* libtidy.dylib */; };
 		387F6E6F162270A9005893DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387F6E6E162270A9005893DB /* Security.framework */; };
 		387F6E71162270B1005893DB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387F6E70162270B1005893DB /* WebKit.framework */; };
 		387F6E73162270CD005893DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387F6E72162270CD005893DB /* SystemConfiguration.framework */; };
-		387F6E74162271C0005893DB /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E2E16226FEA005893DB /* ASIInputStream.m */; };
-		387F6E75162271C0005893DB /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3016226FEA005893DB /* ASIFormDataRequest.m */; };
-		387F6E76162271C0005893DB /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3216226FEA005893DB /* ASIHTTPRequest.m */; };
-		387F6E77162271C0005893DB /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3416226FEA005893DB /* ASINetworkQueue.m */; };
-		387F6E78162271C0005893DB /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3716226FEA005893DB /* ASIDownloadCache.m */; };
-		387F6E79162271C0005893DB /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3916226FEA005893DB /* ASIDataCompressor.m */; };
-		387F6E7A162271C0005893DB /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3B16226FEA005893DB /* ASIDataDecompressor.m */; };
-		387F6E9A16228C26005893DB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9016228C26005893DB /* ioapi.c */; };
-		387F6E9B16228C26005893DB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9216228C26005893DB /* mztools.c */; };
-		387F6E9C16228C26005893DB /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9416228C26005893DB /* unzip.c */; };
-		387F6E9D16228C26005893DB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9616228C26005893DB /* zip.c */; };
-		387F6E9E16228C26005893DB /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9916228C26005893DB /* ZipArchive.mm */; };
+		387F6E74162271C0005893DB /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E2E16226FEA005893DB /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E75162271C0005893DB /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3016226FEA005893DB /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E76162271C0005893DB /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3216226FEA005893DB /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E77162271C0005893DB /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3416226FEA005893DB /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E78162271C0005893DB /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3716226FEA005893DB /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E79162271C0005893DB /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3916226FEA005893DB /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E7A162271C0005893DB /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E3B16226FEA005893DB /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E9A16228C26005893DB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9016228C26005893DB /* ioapi.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E9B16228C26005893DB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9216228C26005893DB /* mztools.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E9C16228C26005893DB /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9416228C26005893DB /* unzip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E9D16228C26005893DB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9616228C26005893DB /* zip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		387F6E9E16228C26005893DB /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 387F6E9916228C26005893DB /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		38CC016F16154DAB002726C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CC016E16154DAB002726C2 /* Cocoa.framework */; };
 		38CC017916154DAB002726C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38CC017716154DAB002726C2 /* InfoPlist.strings */; };
 		38CC017B16154DAB002726C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC017A16154DAB002726C2 /* main.m */; };
@@ -47,7 +47,12 @@
 		38CC018E161552B4002726C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CC018D161552B4002726C2 /* libz.dylib */; };
 		38CC018F16156C74002726C2 /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC018C16154F8E002726C2 /* NSFileManager+DirectoryLocations.m */; };
 		38CC019216158802002726C2 /* SKAddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC019116158801002726C2 /* SKAddOn.m */; };
+		B901D6821800142F0040C2BD /* SKBigFootHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B901D6811800142F0040C2BD /* SKBigFootHelper.m */; };
+		B901D685180015C30040C2BD /* SKConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B901D684180015C30040C2BD /* SKConfigure.m */; };
 		B9200B31162A6C1000983E0D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = B9200B30162A6C1000983E0D /* NSData+MD5.m */; };
+		B93CD6AE16A70891002FE670 /* bigfoot.icns in Resources */ = {isa = PBXBuildFile; fileRef = B93CD6AD16A70891002FE670 /* bigfoot.icns */; };
+		B995E13819F3716F00C19E54 /* SKMainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995E13719F3716F00C19E54 /* SKMainMenuController.m */; };
+		B995E13B19F3724C00C19E54 /* SKMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B995E13A19F3724C00C19E54 /* SKMainWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,7 +119,7 @@
 		387F6E9716228C26005893DB /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		387F6E9816228C26005893DB /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		387F6E9916228C26005893DB /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
-		38CC016A16154DAB002726C2 /* SKBigFoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SKBigFoot.app; path = SKBigFoot1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38CC016A16154DAB002726C2 /* SKBigFoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKBigFoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CC016E16154DAB002726C2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38CC017116154DAB002726C2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		38CC017216154DAB002726C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -132,8 +137,17 @@
 		38CC018D161552B4002726C2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38CC019016158801002726C2 /* SKAddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAddOn.h; sourceTree = "<group>"; };
 		38CC019116158801002726C2 /* SKAddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAddOn.m; sourceTree = "<group>"; };
+		B901D6801800142F0040C2BD /* SKBigFootHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBigFootHelper.h; sourceTree = "<group>"; };
+		B901D6811800142F0040C2BD /* SKBigFootHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBigFootHelper.m; sourceTree = "<group>"; };
+		B901D683180015C30040C2BD /* SKConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKConfigure.h; sourceTree = "<group>"; };
+		B901D684180015C30040C2BD /* SKConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKConfigure.m; sourceTree = "<group>"; };
 		B9200B2F162A6C1000983E0D /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
 		B9200B30162A6C1000983E0D /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		B93CD6AD16A70891002FE670 /* bigfoot.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = bigfoot.icns; path = ../bigfoot.icns; sourceTree = "<group>"; };
+		B995E13619F3716F00C19E54 /* SKMainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMainMenuController.h; sourceTree = "<group>"; };
+		B995E13719F3716F00C19E54 /* SKMainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainMenuController.m; sourceTree = "<group>"; };
+		B995E13919F3724C00C19E54 /* SKMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMainWindowController.h; sourceTree = "<group>"; };
+		B995E13A19F3724C00C19E54 /* SKMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +329,14 @@
 				38CC019116158801002726C2 /* SKAddOn.m */,
 				B9200B2F162A6C1000983E0D /* NSData+MD5.h */,
 				B9200B30162A6C1000983E0D /* NSData+MD5.m */,
+				B901D6801800142F0040C2BD /* SKBigFootHelper.h */,
+				B901D6811800142F0040C2BD /* SKBigFootHelper.m */,
+				B901D683180015C30040C2BD /* SKConfigure.h */,
+				B901D684180015C30040C2BD /* SKConfigure.m */,
+				B995E13619F3716F00C19E54 /* SKMainMenuController.h */,
+				B995E13719F3716F00C19E54 /* SKMainMenuController.m */,
+				B995E13919F3724C00C19E54 /* SKMainWindowController.h */,
+				B995E13A19F3724C00C19E54 /* SKMainWindowController.m */,
 			);
 			path = SKBigFoot;
 			sourceTree = "<group>";
@@ -322,6 +344,7 @@
 		38CC017516154DAB002726C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B93CD6AD16A70891002FE670 /* bigfoot.icns */,
 				38CC017616154DAB002726C2 /* SKBigFoot-Info.plist */,
 				38CC017716154DAB002726C2 /* InfoPlist.strings */,
 				38CC017A16154DAB002726C2 /* main.m */,
@@ -385,6 +408,7 @@
 				38CC017916154DAB002726C2 /* InfoPlist.strings in Resources */,
 				38CC017F16154DAB002726C2 /* Credits.rtf in Resources */,
 				38CC018516154DAB002726C2 /* MainMenu.xib in Resources */,
+				B93CD6AE16A70891002FE670 /* bigfoot.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +438,18 @@
 				387F6E6116227005005893DB /* ASICloudFilesObject.m in Sources */,
 				387F6E6216227005005893DB /* ASICloudFilesObjectRequest.m in Sources */,
 				387F6E6316227005005893DB /* ASICloudFilesRequest.m in Sources */,
+				B901D685180015C30040C2BD /* SKConfigure.m in Sources */,
 				387F6E6416227005005893DB /* ASIS3Bucket.m in Sources */,
+				B901D6821800142F0040C2BD /* SKBigFootHelper.m in Sources */,
 				387F6E6516227005005893DB /* ASIS3BucketObject.m in Sources */,
+				B995E13819F3716F00C19E54 /* SKMainMenuController.m in Sources */,
 				387F6E6616227005005893DB /* ASIS3BucketRequest.m in Sources */,
 				387F6E6716227005005893DB /* ASIS3ObjectRequest.m in Sources */,
 				387F6E6816227005005893DB /* ASIS3Request.m in Sources */,
 				387F6E6916227005005893DB /* ASIS3ServiceRequest.m in Sources */,
 				387F6E9A16228C26005893DB /* ioapi.c in Sources */,
 				387F6E9B16228C26005893DB /* mztools.c in Sources */,
+				B995E13B19F3724C00C19E54 /* SKMainWindowController.m in Sources */,
 				387F6E9C16228C26005893DB /* unzip.c in Sources */,
 				387F6E9D16228C26005893DB /* zip.c in Sources */,
 				387F6E9E16228C26005893DB /* ZipArchive.mm in Sources */,
@@ -509,6 +537,7 @@
 		38CC018916154DAB002726C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKBigFoot/SKBigFoot-Prefix.pch";
 				INFOPLIST_FILE = "SKBigFoot/SKBigFoot-Info.plist";
@@ -520,6 +549,7 @@
 		38CC018A16154DAB002726C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKBigFoot/SKBigFoot-Prefix.pch";
 				INFOPLIST_FILE = "SKBigFoot/SKBigFoot-Info.plist";

@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SKConfigure.h"
+#import "SKMainWindowController.h"
+#import "SKMainMenuController.h"
 
 @interface SKAppDelegate : NSObject <NSApplicationDelegate, NSURLDownloadDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (copy) NSString *applicationSupportDirectory;
-@property (copy) NSString *wowPath;
-@property (retain) NSMutableArray *updateFiles;
-@property (retain) IBOutlet NSProgressIndicator *updateProgress;
-@property (copy) NSString *updateInfo;
-@property (retain) IBOutlet NSWindow *chooseServerWindow;
+@property (weak) IBOutlet NSWindow *window;
+@property (strong) SKConfigure *configure;
+@property (strong) NSMutableDictionary *filterList;
+
+@property (weak) IBOutlet SKMainWindowController *mainWindowController;
+@property (weak) IBOutlet SKMainMenuController *mainMenuWindowController;
 @end
